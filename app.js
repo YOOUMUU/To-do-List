@@ -89,7 +89,7 @@ async function main() {
     const checkedItemID = req.body.checkbox;
     const listName = req.body.listName;
 
-    if (listName === "Today") {
+    if (listName === "待办列表") {
       await Item.findByIdAndRemove(checkedItemID);
       setTimeout(function () {
         res.redirect("/");
